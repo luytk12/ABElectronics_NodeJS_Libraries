@@ -1,7 +1,7 @@
 //================================================
 // ABElectronics IO Pi Pin Write demo
 // Requires rpio to be installed, install with: npm install rpio
-// test Koen Luyten - Aigle
+// test Koen Luyten
 // run with: sudo node iopiwrite.js
 // ================================================
 
