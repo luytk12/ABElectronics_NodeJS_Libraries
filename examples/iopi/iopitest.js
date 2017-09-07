@@ -5,7 +5,7 @@
 // run with: sudo node iopiwrite.js
 // ================================================
 
-// Aigle Dressage
+// This example creates a square wave output on pin 1 of bus 1 by switching a pin on and off at 100ms intervals
 
 var iopi = require('../../lib/iopi/iopi');
 
