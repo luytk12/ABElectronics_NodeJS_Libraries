@@ -1,12 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\examples",
-    "\\iopi",
-    "\\iopi\\nodered",
     "\\lib",
-    "\\lib\\iopi"
+    "\\lib\\expanderpi",
+    "\\lib\\iopi",
+    "\\node-red_iopi"
   ],
-  "SelectedNode": "\\iopi\\nodered",
+  "SelectedNode": "\\lib\\expanderpi\\expanderpi.js",
   "PreviewInSolutionExplorer": false
 }

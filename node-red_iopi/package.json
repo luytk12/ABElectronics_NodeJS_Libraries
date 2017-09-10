@@ -1,25 +1,22 @@
 {
-  "name": "node-red-node-serialport",
-  "version": "0.4.4",
-  "description": "Node-RED nodes to talk to serial ports",
-  "dependencies": {
-    "serialport": "~4.0.7"
-  },
+  "name": "node-red_nodeIoPlus",
+  "version": "0.0.1",
+  "description": "Node-RED nodes to talk to AB Electronics IoPlus",
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-red/node-red-nodes/tree/master/io/serialport"
+    "url": "https://github.com/???"
   },
   "license": "Apache-2.0",
-  "keywords": [ "node-red", "serial" ],
+  "keywords": [ "node-red", "ioplus" ],
   "node-red": {
     "version": ">=0.14.0",
     "nodes": {
-      "serialport": "25-serial.js"
+      "ioplus": "nodeIoPlus.js"
     }
   },
   "author": {
-    "name": "Dave Conway-Jones",
-    "email": "ceejay@vnet.ibm.com",
+    "name": "Koen Luyten",
+    "email": "koenluyten@hotmail.com",
     "url": "http://nodered.org"
   }
 }
