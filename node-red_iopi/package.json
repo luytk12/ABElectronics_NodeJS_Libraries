@@ -2,6 +2,9 @@
   "name": "node-red_nodeIoPlus",
   "version": "0.0.1",
   "description": "Node-RED nodes to talk to AB Electronics IoPlus",
+  "dependencies": {
+    "rpio": ">=0.9.17" 
+  },
   "keywords": [ "node-red", "ioplus" ],
   "node-red": {
     "nodes": {
