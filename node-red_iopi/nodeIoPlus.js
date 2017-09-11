@@ -3,8 +3,7 @@ module.exports = function (RED) {
     //"use strict";
     //var settings = RED.settings;
     //var events = require("events");
-    //var rpio = require("rpio");
-    //var iopi = require("../lib/iopi/iopi");
+    var iopi = require("../lib/iopi/iopi");
 
     function nodeIoPlus(config) {
         RED.nodes.createNode(this, config);
