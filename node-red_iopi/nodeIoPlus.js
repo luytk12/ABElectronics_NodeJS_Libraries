@@ -1,8 +1,8 @@
 
 module.exports = function (RED) {
-    "use strict";
-    var settings = RED.settings;
-    var events = require("events");
+    //"use strict";
+    //var settings = RED.settings;
+    //var events = require("events");
     var iopi = require("../lib/iopi");
 
     function nodeIoPlus(config) {
