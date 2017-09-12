@@ -1,17 +1,22 @@
 
 module.exports = function (RED) {
-    //"use strict";
-    //var settings = RED.settings;
+    "use strict";
+    var settings = RED.settings;
     //var events = require("events");
-    var iopi = require("../lib/iopi/iopi");
+    var iopi = require("./iopi");
 
     function nodeIoPlus(config) {
         RED.nodes.createNode(this, config);
-        this.log("created ioplus");
-        //this.iopi = config.serialport;
-        //this.newline = n.newline;
-        //this.addchar = n.addchar || "false";
+	var node = this;
+        node.log('created IoPlus');
+	
+	//default
+	//0x20 32 IC1
+	//0x21 33 IC2
+	var bus1 = new IoPi(config.bus);
+
     }
+
     RED.nodes.registerType("IoPlus", nodeIoPlus);
 
     //function serialOutNode(config) {
