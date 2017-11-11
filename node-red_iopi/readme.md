@@ -7,7 +7,7 @@ Install
 -------
 Run the following command in your Node-RED user directory - typically `~/.node-red`
 
-    npm i node-red-node-wol
+    npm i node-red-ioplus
 
 
 Usage
