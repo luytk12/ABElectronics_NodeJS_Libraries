@@ -3,8 +3,6 @@
     "",
     "\\examples",
     "\\examples\\iopi",
-    "\\lib",
-    "\\lib\\iopi",
     "\\node-red_iopi"
   ],
   "SelectedNode": "\\node-red_iopi\\nodeIoPlus.js",

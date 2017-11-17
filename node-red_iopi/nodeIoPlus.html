@@ -1,12 +1,12 @@
-
+<!--IoPlus config-->
 <script type="text/x-red" data-template-name="IoPlus">
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
     </div>
     <div class="form-row">
-        <label for="node-input-bus"><i class="fa fa-wrench"></i> Bus</label>
-        <input type="text" id="node-input-bus" placeholder="32">
+        <label for="node-config-input-bus"><i class="fa fa-wrench"></i> Bus</label>
+        <input type="text" id="node-config-input-bus" placeholder="32">
     </div>
 </script>
 
@@ -16,17 +16,57 @@
 
 <script type="text/javascript">
     RED.nodes.registerType('IoPlus', {
-        category: 'Raspberry Pi',
-        color: "Burlywood",
+        category: 'config',
         defaults: {
             name: { value: "" },
-            bus: { value: "32", required: true }
-         },
+            bus: { value: "", required: true }
+        },
         inputs: 1,
         outputs: 0,
         icon: "serial.png",
         label: function () {
             return this.name || "IoPlus";
+        },
+        labelStyle: function () {
+            return this.name ? "node_label_italic" : "";
+        }
+    });
+</script>
+
+<!--IoPlus out-->
+<script type="text/x-red" data-template-name="IoPlus out">
+    <div class="form-row node-input-serial">
+        <label for="node-input-serial"><i class="fa fa-random"></i> <span data-i18n="serial.label.serialport"></span></label>
+        <input type="text" id="node-input-serial">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ioplus out">
+    <p>Provides a connection to an outbound serial port.</p>
+    <p>Only the <code>msg.payload</code> is sent.</p>
+    <p>Optionally the new line character used to split the input can be appended to every message sent out to the serial port.</p>
+    <p>Binary payloads can be sent by using a Buffer object.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('IoPlus out', {
+        category: 'Raspberry Pi',
+        defaults: {
+            name: { name: "" },
+            ioplus: {value:"", type: "IoPlus", required: true }
+        },
+        color: "BurlyWood",
+        inputs: 1,
+        outputs: 0,
+        icon: "serial.png",
+        align: "right",
+        label: function () {
+            var serialNode = RED.nodes.node(this.serial);
+            return this.name || (serialNode ? serialNode.label().split(":")[0] : this._("serial.label.serial"));
         },
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";
