@@ -65,8 +65,8 @@
         icon: "serial.png",
         align: "right",
         label: function () {
-            var serialNode = RED.nodes.node(this.serial);
-            return this.name || (serialNode ? serialNode.label().split(":")[0] : this._("serial.label.serial"));
+            var ioplusNode = RED.nodes.node(this.ioplus);
+            return this.name || (ioplusNode ? ioplusNode.label().split(":")[0] : this._("serial.label.serial"));
         },
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";
@@ -106,8 +106,8 @@
         icon: "serial.png",
         align: "right",
         label: function () {
-            var serialNode = RED.nodes.node(this.serial);
-            return this.name || (serialNode ? serialNode.label().split(":")[0] : this._("serial.label.serial"));
+            var ioplusNode = RED.nodes.node(this.ioplus);
+            return this.name || (ioplusNode ? ioplusNode.label().split(":")[0] : this._("serial.label.serial"));
         },
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";
