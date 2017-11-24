@@ -1,0 +1,26 @@
+{
+  "IoPlus": {
+    "label": {
+      "ioplus": "ioplus",
+      "settings": "Settings",
+      "bus": "Bus"
+    },
+    "placeholder": {
+      "ioplus": "for example: /dev/ttyUSB0/"
+    },
+    "addsplit": "add split character to output messages",
+    "tip": {
+      "split": "Tip: the \"Split on\" character is used to split the input into separate messages. It can also be added to every message sent out to the serial port.",
+      "timeout": "Tip: In timeout mode timeout starts from arrival of first character."
+    },
+    "onopen": "serial port __port__ opened at __baud__ baud __config__",
+    "errors": {
+      "missing-conf": "missing IoPlus config",
+      "serial-port": "serial port",
+      "error": "serial port __port__ error: __error__",
+      "unexpected-close": "serial port __port__ closed unexpectedly",
+      "disconnected": "serial port __port__ disconnected",
+      "closed": "serial port __port__ closed"
+    }
+  }
+}
