@@ -3,8 +3,9 @@
     "",
     "\\examples",
     "\\examples\\iopi",
+    "\\lib",
     "\\node-red_iopi"
   ],
-  "SelectedNode": "\\node-red_iopi\\nodeIoPlus.html",
+  "SelectedNode": "\\node-red_iopi\\nodeIoPlus.js",
   "PreviewInSolutionExplorer": false
 }

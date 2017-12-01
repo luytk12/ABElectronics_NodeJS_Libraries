@@ -3,7 +3,8 @@
     "label": {
       "ioplus": "ioplus",
       "settings": "Settings",
-      "bus": "Bus"
+      "bus": "Bus",
+      "pin": "Pin"
     },
     "placeholder": {
       "ioplus": "for example: /dev/ttyUSB0/"

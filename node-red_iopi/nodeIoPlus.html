@@ -34,7 +34,7 @@
         defaults: {
             name: { value: "ioplus" },
             IoPlus: { value: "", required: true },
-            bus: { value: "32", required: true, validate: RED.validators.number() }
+            bus: { value: 32, required: true, validate: RED.validators.number() }
         },
         label: function () {
             this.bus = this.bus || 32;
@@ -43,10 +43,10 @@
         oneditprepare: function () {
             var previous = null;
             var blist = [
-                { value: "32", label: "0x20", hasValue: false },
-                { value: "33", label: "0x21", hasValue: false },
-                { value: "34", label: "0x22", hasValue: false },
-                { value: "35", label: "0x23", hasValue: false },
+                { value: 32, label: "0x20", hasValue: false },
+                { value: 33, label: "0x21", hasValue: false },
+                { value: 34, label: "0x22", hasValue: false },
+                { value: 35, label: "0x23", hasValue: false },
                 { label: "other", value: "other", icon: "red/images/typedInput/09.png", validate: /^[0-9]*$/ }
             ];
             var busType = "custom";
@@ -121,13 +121,17 @@
         <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="node-red:common.label.name"></span></label>
         <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
     </div>
+
+    <div class="form-row">
+        <label for="node-input-pin"><i class="fa fa-tag"></i> <span data-i18n="IoPlus.label.pin"></span></label>
+        <input type="text" id="node-input-pin">
+    </div>
 </script>
 
 <script type="text/x-red" data-help-name="IoPlus in">
-    <p>Provides a connection to an outbound serial port.</p>
-    <p>Only the <code>msg.payload</code> is sent.</p>
-    <p>Optionally the new line character used to split the input can be appended to every message sent out to the serial port.</p>
-    <p>Binary payloads can be sent by using a Buffer object.</p>
+    <p>Read the value of an individual pin 1 - 16</p>
+    <p>returns 0 = logic level low, 1 = logic level high</p>
+    <p>pin number in <code>msg.payload</code></p>
 </script>
 
 <script type="text/javascript">
@@ -135,7 +139,8 @@
         category: 'Raspberry Pi',
         defaults: {
             name: { name: "" },
-            IoPlus: { value: "", type: "IoPlus", required: true }
+            IoPlus: { value: "", type: "IoPlus", required: true },
+            pin: { value: 1, required: true, validate: RED.validators.number() }
         },
         color: "BurlyWood",
         inputs: 0,
